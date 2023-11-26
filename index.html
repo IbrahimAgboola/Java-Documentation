@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Java Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="image/javalogo.png" width="32" heigth="32" type="image/png">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header class="nav-header"><strong>JAVA DOCUMENTATION</strong></header>
+            <a href="#introduction" class="nav-link">Introduction</a>
+            <a href="#environment_setup" class="nav-link">Environment Setup</a>
+            <a href="#your_first_program" class="nav-link">Your First Program</a>
+            <a href="#variables" class="nav-link">Variables</a>
+            <a href="#basic_operators" class="nav-link">Basic Operators</a>
+            <a href="#classes" class="nav-link">Classes</a>
+            <a href="#objects" class="nav-link">Objects</a>
+            <a href="#comments" class="nav-link">Comments</a>
+        </nav>
+
+        <main id="main-doc">
+            <section class="main-section" id="introduction">
+                <header>Introduction</header>
+                <p>Java programming language was originally developed by Sun Microsystems which was initiated by James Gosling and released in 1995 as core component of Sun Microsystems' Java platform (Java 1.0 [J2SE]).</p>
+                <p>Tools needed:</p>
+                <ul>
+                    <li>Java JDK</li>
+                    <li>Notepad or any other text editor</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="environment_setup">
+                <header>Environment Setup</header>
+                <p>It is important that we set up the Java environment correctly. Java SE is freely available from the link Download Java. So you download a version based on your operating system. <br>
+                Follow the instructions to download Java and run the .exe to install Java on your machine. Once you installed Java on your machine, you would need to set environment variables to point to correct installation directories.</p>
+                <p>Setting up the path for windows</p>
+                <ul>
+                    <li>Right-click on 'My Computer' and select 'Properties'.</li>
+                    <li>Click on the 'Environment variables' button under the 'Advanced' tab.</li>
+                    <li>Now, alter the 'Path' variable so that it also contains the path to the Java executable. Example, if the path is currently set to 'C:\WINDOWS\SYSTEM32', then change your path to read 'C:\WINDOWS\SYSTEM32;c:\Program Files\java\jdk\bin'.</li>
+                </ul>
+            </section>
+
+            <section class="main-sction" id="your_first_program">
+                <header>Your First Program</header>
+                <p>Let us look at a simple code that would print the words <i>Hello World.</i></p>
+                <pre>
+                    <code>public class MyFirstJavaProgram{ <br>  /* This is my first java program. This will print 'Hello World' as the output */ <br>  public static void main(String[]args){ System.out.println("Hello World"); <br>  // prints Hello World <br>} <br>}</code>
+                    </pre>
+            </section>
+
+            <section class="main-section" id="variables">
+                <header>Variables</header>
+                <p>A variable provides us with named storage that our programs can manipulate. Each variable in Java has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.</p>
+                <p>Types of variables in Java</p>
+                <ul>
+                    <li>Local variables</li>
+                    <li>Instance variables</li>
+                    <li>Class/static variables</li>
+                </ul>
+                <p>The basic form of a variable declaration is shown here:</p>
+                <pre>
+                    <code>data type variable [ = value][, variable [= value] ...];</code>
+                </pre>
+                <p>Following are valid variable declaration and initiation in Java:</p>
+                <pre>
+                    <code>int a = 10, b = 10; // Example of initialization</code>
+                    <code>int a, b, c; // Declares three ints, a, b, and c.</code>
+                    <code>char a = 'a'; // the char variable a iis initialized with value 'a'</code>
+                    <code>byte B = 22; // initializes a byte type variable B.</code>
+                    <code>double pi = 3.14159; // declares and assigns a value of PI.</code>
+                </pre>
+            </section>
+
+            <section class="main_section" id="basic_operators">
+                <header>Basic Operators</header>
+                <p>Java provides a rich set of operators to manipulate variables. The basic operators allows us to perform arithmentic operations on numbers.</p>
+                <p>Basic operators are:</p>
+                <ul>
+                    <li>Addition</li>
+                    <li>Subtraction</li>
+                    <li>Multiplication</li>
+                    <li>Division</li>
+                </ul>
+                <p>Examples are:</p>
+                <pre>
+                    <code>public class Test{ <br>   public static void main(String args[]){ <br>     int a =10, int b =20, int c =25, int d =25; <br>     System.out.println("a+ b = "+(a + b)); <br>     System.out.println("a - b = "+(a - b)); <br>     System out.println("a * b = "+(a * b)); <br>     System.out.println("b / a = "+(b / a)); <br>     System.out.println("b % a = "+(b % a)); <br>     System.out.println("c % a = "+(c % a)); <br>     System.out.println("a++ = "+(a++)); <br>     System.out.println("b-- = "+(a--)); <br>     // Check the difference in d++ and ++d <br>     System.out.println("d++ = "+(d++)); <br>     System.out.println("++d = "+(++d)); <br>} <br>}  </code>
+                </pre>
+            </section>
+
+            <section class="main-section" id="classes">
+                <header>Classes</header>
+                <p>A class is a blue print from which individual objects are created. A class can contain any of the following variable types.</p>
+                <ul>
+                    <li><strong>Local variables:</strong> Variables defined inside methods, constructors or blocks are called local variables. The variable will be declared and initialized within the method and the variable will be destroyed when the method has completed.</li>
+                    <li><strong>Instance variables:</strong> Instance variables are variables within a class but outside any method. These variables are instantiated when the class is loaded. Instance variables can be accessed from inside any method, constructor or blocks of that particular class.</li>
+                    <li><strong>Class variables:</strong> Class variables are variables declared within a class, outside any method, with the static keyword.</li>
+                </ul>
+                <p>Example of class</p>
+                <pre>
+                    <code>public class Dog{ <br>  String breed; <br>  int age; <br>  String color; <br>  void barking(){ } <br>  void hungry(){ } <br>  void sleeping(){ } <br>}
+                    </code>
+                </pre>
+                <p>A class can have any number of methods to access the value of various kinds of methods. In the above example, barking(), hungry() and sleeping() are methods.</p>
+            </section>
+
+            <section class="main-section" id="objects">
+                <header>Objects</header>
+                <p>An object is created from a class. In Java the <i>new</i> keyword is used to create new objects.</p>
+                <p>There are three steps when creating an object from a class:</p>
+                <ul>
+                    <li><strong>Declaration:</strong> A variable declaration with a variable name with an object type.</li>
+                    <li><strong>Instantiation:</strong> The 'new' keyword is used to create the object.</li>
+                    <li><strong>Initialization:</strong> The 'new' keyword is followed by a call to a constructor. This call initializes the new object.</li>
+                </ul>
+                <p>Example of creating object is given below:</p>
+                <pre>
+                    <code>public class Puppy{ <br>  public Puppy(String name){ <br>  // This constructor has one parameter, name. <br>  System.out.println("Passed Name is :"+ name ); <br>} <br>public static void main(String[]args){ <br>  // Following statement would create an object myPuppy <br>  Puppy myPuppy =new Puppy("tommy"); <br>} <br>}</code>
+                </pre>
+            </section>
+
+            <section class="main-section" id="comments">
+                <header>Comments</header>
+                <p>Comments are lines of code that are (usually) meant purely for humans to read. The compiler utterly
+                ignores comments. Java supports two styles of comments, end-of-line comments and block comments.</p>
+                <p>Examples of comments in Java:</p>
+                <p>End-of-line comments</p>
+                <pre>
+                    <code>// end-of-line comment that happens to be the only thing on the line </code>
+                </pre>
+                <p>Block comments</p>
+                <pre>
+                    <code>/* Now is the time for all good coders to write meaningful comments, <br>   so that the rest of us can understand what the code is doing. */</code>
+                </pre>
+            </section>
+        </main>
+    </body>
+</html>
